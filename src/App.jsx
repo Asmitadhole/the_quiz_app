@@ -106,7 +106,7 @@ export default function App() {
         if (!response.ok) {
           throw new Error(`HTTP Error: ${response.status}`);
         }
-        console.log(response.url);
+        // console.log(response.url);
         return response.json();
       })
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
