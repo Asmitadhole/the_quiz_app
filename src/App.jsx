@@ -11,6 +11,7 @@ import Progress from "./components/Progess";
 import FinishScreen from "./components/FinishScreen";
 import Footer from "./components/Footer";
 import Timer from "./components/Timer";
+// import data from "../src/components/questions.json"
 
 const SECS_PER_QUESTION = 30;
 
@@ -101,7 +102,7 @@ export default function App() {
   );
 
   useEffect(function () {
-    fetch(`/questions.json?${new Date().getTime()}`)
+    fetch(`/src/components/questions.json?${new Date().getTime()}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP Error: ${response.status}`);
