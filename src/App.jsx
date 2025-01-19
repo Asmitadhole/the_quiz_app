@@ -101,7 +101,7 @@ export default function App() {
   );
 
   useEffect(function () {
-    fetch(`/data/questions.json?${new Date().getTime()}`)
+    fetch(`/questions.json?${new Date().getTime()}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP Error: ${response.status}`);
